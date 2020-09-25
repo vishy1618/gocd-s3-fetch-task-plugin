@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cd.go.contrib.task.skeleton;
+package contentstack.gocd.plugins.s3;
 
 import java.util.Map;
 

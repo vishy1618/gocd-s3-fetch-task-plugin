@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cd.go.contrib.task.skeleton;
+package contentstack.gocd.plugins.s3;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -32,8 +32,10 @@ import java.util.Arrays;
 @Extension
 public class TaskPlugin implements GoPlugin {
 
-    public static final String URL_PROPERTY = "Url";
-    public static final String ADDITIONAL_OPTIONS = "AdditionalOptions";
+    public static final String REGION = "Region";
+    public static final String BUCKET = "Bucket";
+    public static final String SOURCE_FILE_PATH = "SourceFilePath";
+    public static final String DESTINATION_PATH = "DestinationPath";
     public static final String SECURE_CONNECTION = "yes";
     public static final String SECURE_CONNECTION_PROPERTY = "SecureConnection";
     public static final String REQUEST_TYPE = "-G";

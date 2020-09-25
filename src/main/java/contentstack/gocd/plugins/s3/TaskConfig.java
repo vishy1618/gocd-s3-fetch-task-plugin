@@ -14,41 +14,42 @@
  * limitations under the License.
  */
 
-package cd.go.contrib.task.skeleton;
+package contentstack.gocd.plugins.s3;
+
 
 import java.util.Map;
 
 // TODO: edit this to map to the fields in your task configuration
 public class TaskConfig {
-    private final String requestType;
-    private final String secureConnection;
-    private final String additionalOptions;
-    private final String url;
+    private final String region;
+    private final String bucket;
+    private final String sourceFilePath;
+    private final String destinationPath;
 
     public TaskConfig(Map config) {
-        requestType = getValue(config, TaskPlugin.REQUEST_PROPERTY);
-        secureConnection = getValue(config, TaskPlugin.SECURE_CONNECTION_PROPERTY);
-        additionalOptions = getValue(config, TaskPlugin.ADDITIONAL_OPTIONS);
-        url = getValue(config, TaskPlugin.URL_PROPERTY);
+        region = getValue(config, TaskPlugin.REGION);
+        bucket = getValue(config, TaskPlugin.BUCKET);
+        sourceFilePath = getValue(config, TaskPlugin.SOURCE_FILE_PATH);
+        destinationPath = getValue(config, TaskPlugin.DESTINATION_PATH);
     }
 
     private String getValue(Map config, String property) {
         return (String) ((Map) config.get(property)).get("value");
     }
 
-    public String getRequestType() {
-        return requestType;
+    public String getRegion() {
+        return region;
     }
 
-    public String getSecureConnection() {
-        return secureConnection;
+    public String getBucket() {
+        return bucket;
     }
 
-    public String getAdditionalOptions() {
-        return additionalOptions;
+    public String getSourceFilePath() {
+        return sourceFilePath;
     }
 
-    public String getUrl() {
-        return url;
+    public String getDestinationPath() {
+        return destinationPath;
     }
 }
